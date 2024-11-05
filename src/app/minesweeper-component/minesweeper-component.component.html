@@ -1,0 +1,14 @@
+<div class="grid">
+    <div *ngFor="let row of grid; let x = index" class="row">
+      <div
+        *ngFor="let cell of row; let y = index"
+        class="cell"
+        [class.revealed]="cell.revealed"
+        [class.mine]="cell.hasMine && cell.revealed"
+        (click)="revealCell(x, y)"
+      >
+        <span *ngIf="cell.revealed">{{ cell.hasMine ? '💣' : cell.adjacentMines }}</span>
+      </div>
+    </div>
+  </div>
+  
