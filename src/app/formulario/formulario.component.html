@@ -1,13 +1,7 @@
 <form (ngSubmit)="onSubmit()">
-    <label for="rows">Filas:</label>
-    <input type="number" id="rows" [(ngModel)]="rows" name="rows" min="1" required />
-    
-    <label for="cols">Columnas:</label>
-    <input type="number" id="cols" [(ngModel)]="cols" name="cols" min="1" required />
-
-    <label for="min">Minas</label>
-    <input type="number" id="min" [(ngModel)]="mines" name="mines" min="1" required>
-    
+    <label for="min">Minas:</label>
+    <input type="number" id="min" [(ngModel)]="mines" name="mines" min="1" required />
+  
     <button type="submit">Iniciar Juego</button>
   </form>
   

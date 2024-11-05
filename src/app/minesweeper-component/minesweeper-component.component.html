@@ -7,8 +7,12 @@
         [class.mine]="cell.hasMine && cell.revealed"
         (click)="revealCell(x, y)"
       >
-        <span *ngIf="cell.revealed">{{ cell.hasMine ? '💣' : cell.adjacentMines }}</span>
+        <span *ngIf="cell.revealed">{{ cell.hasMine ? '💣' : (cell.adjacentMines > 0 ? cell.adjacentMines : '') }}</span>
+        <span *ngIf="!cell.revealed">❓</span>
       </div>
     </div>
   </div>
+  
+
+  <button (click)="restartGame()" *ngIf="gameState !== 'inProgress'">Reiniciar Juego</button>
   

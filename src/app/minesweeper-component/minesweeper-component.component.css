@@ -1,25 +1,27 @@
 .grid {
-    display: grid;
-    grid-template-columns: repeat(10, 30px); /* 10 columnas */
-    grid-gap: 2px;
-  }
-  
-  .cell {
-    width: 30px;
-    height: 30px;
-    background-color: #ccc;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: 1px solid #aaa;
-  }
-  
-  .cell.revealed {
-    background-color: #fff;
-  }
-  
-  .cell.mine {
-    background-color: red;
-  }
-  
+  display: grid;
+  gap: 1px; /* Espaciado entre celdas */
+}
+
+.row {
+  display: flex; /* Utiliza flexbox para las filas */
+}
+
+.cell {
+  width: 30px; /* Ancho de cada celda */
+  height: 30px; /* Alto de cada celda */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #888; /* Borde de celdas */
+  cursor: pointer;
+  background-color: #ccc; /* Color de fondo de las celdas */
+}
+
+.cell.revealed {
+  background-color: #fff; /* Color de fondo cuando se revela */
+}
+
+.cell.mine.revealed {
+  background-color: red; /* Color de fondo para minas reveladas */
+}
